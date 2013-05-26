@@ -38,7 +38,7 @@
   SSGentleAlertView* alert = [SSGentleAlertView new];
   alert.delegate = self;
   alert.title = @"SSGentleAlertView";
-  alert.message = @"This is a GentleAlertView!\nUIAlertView is too noisy to use for the normal messages.";
+  alert.message = @"This is GentleAlertView!\nUIAlertView is too strong to use for ordinary messages.";
   alert.cancelButtonIndex = 0;
   [alert addButtonWithTitle:@"Cancel"];
   [alert addButtonWithTitle:@"OK"];
@@ -51,7 +51,7 @@
   SSGentleAlertView* alert = [SSGentleAlertView new];
   alert.delegate = self;
   alert.title = @"SSGentleAlertView";
-  alert.message = @"This is a GentleAlertView!\nUIAlertView is too noisy to use for the normal messages.";
+  alert.message = @"This is GentleAlertView!\nUIAlertView is too strong to use for ordinary messages.";
   alert.cancelButtonIndex = 2;
   [alert addButtonWithTitle:@"OK"];
   [alert addButtonWithTitle:@"Later"];

@@ -54,15 +54,15 @@
 				</object>
 				<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage">
 					<string key="NSClassName">NSImage</string>
-					<string key="NSResourceName">SSGentleAlertView.bundle/UIPopupAlertSheetButtonPress.png</string>
+					<string key="NSResourceName">SSGentleAlertViewDefault.bundle/UIPopupAlertSheetButtonPress.png</string>
 				</object>
 				<object class="NSCustomResource" key="IBUIDisabledBackgroundImage">
 					<string key="NSClassName">NSImage</string>
-					<string key="NSResourceName">SSGentleAlertView.bundle/UIPopupAlertSheetDefaultButton.png</string>
+					<string key="NSResourceName">SSGentleAlertViewDefault.bundle/UIPopupAlertSheetDefaultButton.png</string>
 				</object>
 				<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 					<string key="NSClassName">NSImage</string>
-					<string key="NSResourceName">SSGentleAlertView.bundle/UIPopupAlertSheetButton.png</string>
+					<string key="NSResourceName">SSGentleAlertViewDefault.bundle/UIPopupAlertSheetButton.png</string>
 				</object>
 				<object class="IBUIFontDescription" key="IBUIFontDescription">
 					<int key="type">2</int>
@@ -122,9 +122,9 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="SSGentleAlertView.bundle/UIPopupAlertSheetButton.png">{16, 16}</string>
-			<string key="SSGentleAlertView.bundle/UIPopupAlertSheetButtonPress.png">{16, 16}</string>
-			<string key="SSGentleAlertView.bundle/UIPopupAlertSheetDefaultButton.png">{16, 16}</string>
+			<string key="SSGentleAlertViewDefault.bundle/UIPopupAlertSheetButton.png">{16, 16}</string>
+			<string key="SSGentleAlertViewDefault.bundle/UIPopupAlertSheetButtonPress.png">{16, 16}</string>
+			<string key="SSGentleAlertViewDefault.bundle/UIPopupAlertSheetDefaultButton.png">{16, 16}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
