@@ -2,8 +2,6 @@
 -----
 # SSGentleAlertView
 
-SSGentleAlertViewは、
-
 * It is gnetler than UIAlertView
 * It can be used in the same way as UIAlertView
 * It can be changed the Appearance unlike UIAlertView
@@ -44,13 +42,13 @@ Designed by [Atsushi Morino](https://twitter.com/limonomori)
 
 ``` objc
 /*
- * これにYESを設定すると、背景部分をタップしたときもキャンセル扱いにしてダイアログを閉じる
+ * If set YES to this property, the dialog can be closed in the tap to the background part
  */
 @property (nonatomic) BOOL disappearWhenBackgroundClicked;
 
 /*
- * init時にSSGentleAlertViewStyleを設定することでダイアログのデザインを変更できる
- * SSGentleAlertViewStyleDefault / SSGentleAlertViewStyleBlack / SSGentleAlertViewStyleNative の3種を指定可能
+ * It is possible to select 3 styles (SSGentleAlertViewStyleDefault or SSGentleAlertViewStyleBlack or SSGentleAlertViewStyleNative)
+ * when you use the init method
  */
 - (id)initWithStyle:(SSGentleAlertViewStyle)style;
 - (id)initWithStyle:(SSGentleAlertViewStyle)style title:(NSString*)title message:(NSString*)message delegate:(id)delegate cancelButtonTitle:(NSString*)cancelButtonTitle otherButtonTitles:(NSString*)otherButtonTitles, ...;
