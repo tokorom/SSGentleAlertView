@@ -16,6 +16,12 @@
 		062F70CD1751B5C700EE9F53 /* SSGentleAlertButtonBlack.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062F70CA1751B5C700EE9F53 /* SSGentleAlertButtonBlack.xib */; };
 		062F70CE1751B5C700EE9F53 /* SSGentleAlertViewBlack.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 062F70CB1751B5C700EE9F53 /* SSGentleAlertViewBlack.bundle */; };
 		062F70CF1751B5C700EE9F53 /* SSGentleAlertViewBlack.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062F70CC1751B5C700EE9F53 /* SSGentleAlertViewBlack.xib */; };
+		062F70D61751FA7D00EE9F53 /* dialog_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 062F70D11751FA7D00EE9F53 /* dialog_bg.png */; };
+		062F70D71751FA7D00EE9F53 /* dialog_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062F70D21751FA7D00EE9F53 /* dialog_bg@2x.png */; };
+		062F70D81751FA7D00EE9F53 /* dialog_btn_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 062F70D31751FA7D00EE9F53 /* dialog_btn_normal.png */; };
+		062F70D91751FA7D00EE9F53 /* dialog_btn_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062F70D41751FA7D00EE9F53 /* dialog_btn_normal@2x.png */; };
+		062F70DA1751FA7D00EE9F53 /* dialog_btn_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 062F70D51751FA7D00EE9F53 /* dialog_btn_pressed.png */; };
+		062F70DC1752022C00EE9F53 /* dialog_btn_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062F70DB1752022B00EE9F53 /* dialog_btn_pressed@2x.png */; };
 		0632F0BE175082DD00CE8A0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0BD175082DD00CE8A0F /* UIKit.framework */; };
 		0632F0C0175082DD00CE8A0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0BF175082DD00CE8A0F /* Foundation.framework */; };
 		0632F0C2175082DD00CE8A0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0C1175082DD00CE8A0F /* CoreGraphics.framework */; };
@@ -42,6 +48,12 @@
 		062F70CA1751B5C700EE9F53 /* SSGentleAlertButtonBlack.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertButtonBlack.xib; sourceTree = "<group>"; };
 		062F70CB1751B5C700EE9F53 /* SSGentleAlertViewBlack.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSGentleAlertViewBlack.bundle; sourceTree = "<group>"; };
 		062F70CC1751B5C700EE9F53 /* SSGentleAlertViewBlack.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertViewBlack.xib; sourceTree = "<group>"; };
+		062F70D11751FA7D00EE9F53 /* dialog_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dialog_bg.png; sourceTree = "<group>"; };
+		062F70D21751FA7D00EE9F53 /* dialog_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialog_bg@2x.png"; sourceTree = "<group>"; };
+		062F70D31751FA7D00EE9F53 /* dialog_btn_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dialog_btn_normal.png; sourceTree = "<group>"; };
+		062F70D41751FA7D00EE9F53 /* dialog_btn_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialog_btn_normal@2x.png"; sourceTree = "<group>"; };
+		062F70D51751FA7D00EE9F53 /* dialog_btn_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dialog_btn_pressed.png; sourceTree = "<group>"; };
+		062F70DB1752022B00EE9F53 /* dialog_btn_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dialog_btn_pressed@2x.png"; sourceTree = "<group>"; };
 		0632F0BA175082DD00CE8A0F /* SSGentleAlertViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSGentleAlertViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0632F0BD175082DD00CE8A0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0632F0BF175082DD00CE8A0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +121,19 @@
 			path = SSGentleAlertViewBlack;
 			sourceTree = "<group>";
 		};
+		062F70D01751FA7D00EE9F53 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				062F70D11751FA7D00EE9F53 /* dialog_bg.png */,
+				062F70D21751FA7D00EE9F53 /* dialog_bg@2x.png */,
+				062F70D31751FA7D00EE9F53 /* dialog_btn_normal.png */,
+				062F70D41751FA7D00EE9F53 /* dialog_btn_normal@2x.png */,
+				062F70D51751FA7D00EE9F53 /* dialog_btn_pressed.png */,
+				062F70DB1752022B00EE9F53 /* dialog_btn_pressed@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		0632F0B1175082DD00CE8A0F = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +178,7 @@
 				0632F104175083FD00CE8A0F /* SSGentleAlertView-Prefix.pch */,
 				0632F105175083FD00CE8A0F /* ViewController.h */,
 				0632F106175083FD00CE8A0F /* ViewController.m */,
+				062F70D01751FA7D00EE9F53 /* Resources */,
 			);
 			path = SSGentleAlertViewSample;
 			sourceTree = "<group>";
@@ -237,6 +263,12 @@
 				062F70CD1751B5C700EE9F53 /* SSGentleAlertButtonBlack.xib in Resources */,
 				062F70CE1751B5C700EE9F53 /* SSGentleAlertViewBlack.bundle in Resources */,
 				062F70CF1751B5C700EE9F53 /* SSGentleAlertViewBlack.xib in Resources */,
+				062F70D61751FA7D00EE9F53 /* dialog_bg.png in Resources */,
+				062F70D71751FA7D00EE9F53 /* dialog_bg@2x.png in Resources */,
+				062F70D81751FA7D00EE9F53 /* dialog_btn_normal.png in Resources */,
+				062F70D91751FA7D00EE9F53 /* dialog_btn_normal@2x.png in Resources */,
+				062F70DA1751FA7D00EE9F53 /* dialog_btn_pressed.png in Resources */,
+				062F70DC1752022C00EE9F53 /* dialog_btn_pressed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

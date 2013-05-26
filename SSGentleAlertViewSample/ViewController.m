@@ -6,10 +6,12 @@
 
 #import "ViewController.h"
 #import "SSGentleAlertView.h"
+#import "SSDialogView.h"
 
 @interface ViewController ()
-@property (nonatomic) SSGentleAlertViewStyle style;
+@property (assign) SSGentleAlertViewStyle style;
 @property (weak) IBOutlet UISegmentedControl* segmentedControl;
+@property (assign, getter=isOriginal) BOOL original;
 @end 
 
 @implementation ViewController
@@ -40,6 +42,10 @@
                                           delegate:self
                                  cancelButtonTitle:nil
                                  otherButtonTitles:@"OK", nil];
+  if (self.isOriginal) {
+    [self.class setAppearanceToGentleAlertView:alert];
+    alert.disappearWhenBackgroundClicked = YES;
+  }
   [alert show];
 }
 
@@ -53,6 +59,10 @@
   alert.cancelButtonIndex = 0;
   [alert addButtonWithTitle:@"Cancel"];
   [alert addButtonWithTitle:@"OK"];
+  if (self.isOriginal) {
+    [self.class setAppearanceToGentleAlertView:alert];
+    alert.disappearWhenBackgroundClicked = YES;
+  }
   [alert show];
 }
 
@@ -67,6 +77,10 @@
   [alert addButtonWithTitle:@"OK"];
   [alert addButtonWithTitle:@"Later"];
   [alert addButtonWithTitle:@"Cancel"];
+  if (self.isOriginal) {
+    [self.class setAppearanceToGentleAlertView:alert];
+    alert.disappearWhenBackgroundClicked = YES;
+  }
   [alert show];
 }
 
@@ -77,12 +91,17 @@
 
 - (IBAction)styleDidChange:(UISegmentedControl*)segmentedControl
 {
+  self.original = NO;
   switch (segmentedControl.selectedSegmentIndex) {
     case 1:
       [self updateStyle:SSGentleAlertViewStyleBlack];
       break;
     case 2:
       [self updateStyle:SSGentleAlertViewStyleNative];
+      break;
+    case 3:
+      self.original = YES;
+      [self updateStyle:SSGentleAlertViewStyleDefault];
       break;
     default:
       [self updateStyle:SSGentleAlertViewStyleDefault];
@@ -110,6 +129,31 @@
       break;
   }
   self.style = style;
+}
+
++ (void)setAppearanceToGentleAlertView:(SSGentleAlertView*)alertView
+{
+  alertView.backgroundImageView.image = [UIImage imageNamed:@"dialog_bg"];
+  alertView.dialogImageView.image = nil;
+
+  alertView.titleLabel.textColor = [UIColor colorWithRed:1.0 green:0.5 blue:0.0 alpha:1.0];
+  alertView.titleLabel.shadowColor = UIColor.clearColor;
+  alertView.messageLabel.textColor = [UIColor colorWithRed:0.4 green:0.2 blue:0.0 alpha:1.0];
+  alertView.messageLabel.shadowColor = UIColor.clearColor;
+
+  UIButton* button = [alertView buttonBase];
+  [button setBackgroundImage:[SSDialogView resizableImage:[UIImage imageNamed:@"dialog_btn_normal"]] forState:UIControlStateNormal];
+  [button setBackgroundImage:[SSDialogView resizableImage:[UIImage imageNamed:@"dialog_btn_pressed"]] forState:UIControlStateHighlighted];
+  [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+  [button setTitleColor:UIColor.whiteColor forState:UIControlStateHighlighted];
+  [alertView setButtonBase:button];
+
+  button = [alertView defaultButtonBase];
+  [button setBackgroundImage:[SSDialogView resizableImage:[UIImage imageNamed:@"dialog_btn_normal"]] forState:UIControlStateNormal];
+  [button setBackgroundImage:[SSDialogView resizableImage:[UIImage imageNamed:@"dialog_btn_pressed"]] forState:UIControlStateHighlighted];
+  [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+  [button setTitleColor:UIColor.whiteColor forState:UIControlStateHighlighted];
+  [alertView setDefaultButtonBase:button];
 }
 
 @end

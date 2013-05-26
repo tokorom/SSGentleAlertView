@@ -24,3 +24,14 @@
 - (NSInteger)addButtonWithTitle:(NSString*)title;
 
 @end
+
+@interface SSGentleAlertView (Appearance)
+- (UIImageView*)backgroundImageView;
+- (UIImageView*)dialogImageView;
+- (UILabel*)titleLabel;
+- (UILabel*)messageLabel;
+- (UIButton*)buttonBase;
+- (UIButton*)defaultButtonBase;
+- (void)setButtonBase:(UIButton*)buttonBase;
+- (void)setDefaultButtonBase:(UIButton*)buttonBase;
+@end

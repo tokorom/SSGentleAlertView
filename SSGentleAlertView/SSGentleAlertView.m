@@ -9,6 +9,7 @@
 
 @interface SSGentleAlertView ()
 @property (weak) IBOutlet UIView* backgroundView;
+@property (weak) IBOutlet UIImageView* backgroundImageView;
 @property (weak) IBOutlet SSDialogView* dialogView;
 @property (weak) IBOutlet UILabel* titleLabel;
 @property (weak) IBOutlet UILabel* messageLabel;
@@ -154,6 +155,33 @@
 {
   [self.buttonCaptions addObject:title];
   return self.buttonCaptions.count - 1;
+}
+
+#pragma mark - Appearance
+
+- (UIImageView*)dialogImageView
+{
+  return self.dialogView.dialogImageView;
+}
+
+- (UIButton*)buttonBase
+{
+  return [self.dialogView buttonBase];
+}
+
+- (void)setButtonBase:(UIButton*)buttonBase
+{
+  [self.dialogView setButtonBase:buttonBase];
+}
+
+- (UIButton*)defaultButtonBase
+{
+  return [self.dialogView defaultButtonBase];
+}
+
+- (void)setDefaultButtonBase:(UIButton*)buttonBase
+{
+  [self.dialogView setDefaultButtonBase:buttonBase];
 }
 
 #pragma mark - Private Methods

@@ -9,7 +9,6 @@
 @interface SSDialogView ()
 @property (weak) IBOutlet UILabel* titleLabel;
 @property (weak) IBOutlet UILabel* messageLabel;
-@property (weak) IBOutlet UIImageView* backgroundImageView;
 @property (weak) IBOutlet UIImageView* dialogImageView;
 @property (weak) IBOutlet UIView* buttonContainerView;
 @property (assign) CGFloat defaultTitleLabelHeight;
@@ -19,6 +18,8 @@
 @property (strong) UIColor* buttonLabelShadowColor;
 @property (assign) CGSize buttonLabelShadowOffset;
 @property (nonatomic) SSGentleAlertViewStyle style;
+@property (strong) UIButton* buttonBaseInstance;
+@property (strong) UIButton* defaultButtonBaseInstance;
 @end 
 
 @implementation SSDialogView
@@ -32,8 +33,6 @@
   self.defaultButtonContainerViewY = self.buttonContainerView.frame.origin.y;
   self.defaultButtonContainerViewHeight = self.buttonContainerView.bounds.size.height;
 
-  UIImage* backgroundImage = self.backgroundImageView.image;
-  self.backgroundImageView.image = [self.class resizableImage:backgroundImage];
   UIImage* dialogImage = self.dialogImageView.image;
   self.dialogImageView.image = [self.class resizableImage:dialogImage];
 
@@ -114,6 +113,9 @@
      forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:buttonCaption forState:UIControlStateNormal];
     [self setupButton:button];
+    if (nil != self.buttonBaseInstance) {
+      [self.class setButtonAppearanceTo:button from:self.buttonBaseInstance];
+    }
     [buttons addObject:button];
   }
 
@@ -159,7 +161,12 @@
       }
     }
   }
-  [self.class setDefaultButtonImageToButton:lastButton];
+  if (nil != lastButton) {
+    [self.class setDefaultButtonImageToButton:lastButton];
+    if (nil != self.defaultButtonBaseInstance) {
+      [self.class setButtonAppearanceTo:lastButton from:self.defaultButtonBaseInstance];
+    }
+  }
 }
 
 - (void)setViewStyle:(SSGentleAlertViewStyle)style
@@ -177,6 +184,14 @@
   self.buttonLabelShadowOffset = CGSizeMake([layoutSetting[@"ButtonShadowOffsetX"] floatValue], [layoutSetting[@"ButtonShadowOffsetY"] floatValue]);
 }
 
++ (UIImage*)resizableImage:(UIImage*)image
+{
+  const CGFloat capWidth = image.size.width  /  2;
+  const CGFloat capHeight = image.size.height / 2;
+  UIEdgeInsets capInsets = UIEdgeInsetsMake(capHeight, capWidth, capHeight, capWidth);
+  return [image resizableImageWithCapInsets:capInsets];
+}
+
 #pragma mark - UIView Methods
 
 - (CGSize)sizeThatFits:(CGSize)size
@@ -189,17 +204,40 @@
   return size;
 }
 
-#pragma mark - Private Methods
+#pragma mark - Appearance
 
-+ (UIImage*)resizableImage:(UIImage*)image
+- (UIButton*)buttonBase
 {
-  //const CGFloat capWidth = image.size.width / image.scale /  2;
-  //const CGFloat capHeight = image.size.height / image.scale / 2;
-  const CGFloat capWidth = image.size.width  /  2;
-  const CGFloat capHeight = image.size.height / 2;
-  UIEdgeInsets capInsets = UIEdgeInsetsMake(capHeight, capWidth, capHeight, capWidth);
-  return [image resizableImageWithCapInsets:capInsets];
+  if (nil != self.buttonBaseInstance) {
+    return self.buttonBaseInstance;
+  } else {
+    UIButton* button = [self.class buttonFromNibForStyle:self.style];
+    return button;
+  }
 }
+
+- (void)setButtonBase:(UIButton*)buttonBase
+{
+  self.buttonBaseInstance = buttonBase;
+}
+
+- (UIButton*)defaultButtonBase
+{
+  if (nil != self.defaultButtonBaseInstance) {
+    return self.defaultButtonBaseInstance;
+  } else {
+    UIButton* button = [self.class buttonFromNibForStyle:self.style];
+    [self.class setDefaultButtonImageToButton:button];
+    return button;
+  }
+}
+
+- (void)setDefaultButtonBase:(UIButton*)buttonBase
+{
+  self.defaultButtonBaseInstance = buttonBase;
+}
+
+#pragma mark - Private Methods
 
 - (void)setupButton:(UIButton*)button
 {
@@ -273,6 +311,40 @@
     case SSGentleAlertViewStyleBlack: return @"SSGentleAlertButtonBlack";
     default: return @"SSGentleAlertButtonDefault";
   }
+}
+
++ (void)setButtonAppearanceTo:(UIButton*)to from:(UIButton*)from
+{
+  [self.class setLabelAppearanceTo:to.titleLabel from:from.titleLabel];
+  [self.class setButtonAppearanceTo:to from:from forState:UIControlStateNormal];
+  [self.class setButtonAppearanceTo:to from:from forState:UIControlStateHighlighted];
+  [self.class setButtonAppearanceTo:to from:from forState:UIControlStateSelected];
+  [self.class setButtonAppearanceTo:to from:from forState:UIControlStateDisabled];
+  to.reversesTitleShadowWhenHighlighted = from.reversesTitleShadowWhenHighlighted;
+  to.adjustsImageWhenHighlighted = from.adjustsImageWhenHighlighted;
+  to.adjustsImageWhenDisabled = from.adjustsImageWhenDisabled;
+  to.showsTouchWhenHighlighted = from.showsTouchWhenHighlighted;
+  to.tintColor = from.tintColor;
+  to.contentEdgeInsets = from.contentEdgeInsets;
+  to.titleEdgeInsets = from.titleEdgeInsets;
+  to.imageEdgeInsets = from.imageEdgeInsets;
+}
+
++ (void)setButtonAppearanceTo:(UIButton*)to from:(UIButton*)from forState:(UIControlState)state
+{
+  [to setTitleColor:[from titleColorForState:state] forState:state];
+  [to setTitleShadowColor:[from titleShadowColorForState:state] forState:state];
+  [to setBackgroundImage:[from backgroundImageForState:state] forState:state];
+  [to setImage:[from imageForState:state] forState:state];
+}
+
++ (void)setLabelAppearanceTo:(UILabel*)to from:(UILabel*)from
+{
+  to.font = from.font;
+  to.textColor = from.textColor;
+  to.highlightedTextColor = from.highlightedTextColor;
+  to.shadowColor = from.shadowColor;
+  to.shadowOffset = from.shadowOffset;
 }
 
 @end

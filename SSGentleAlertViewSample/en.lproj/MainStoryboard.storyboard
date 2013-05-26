@@ -58,12 +58,13 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Wa4-XL-jxZ">
-                                <rect key="frame" x="35" y="13" width="250" height="44"/>
+                                <rect key="frame" x="6" y="13" width="308" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Default"/>
                                     <segment title="Black"/>
                                     <segment title="Native"/>
+                                    <segment title="Original"/>
                                 </segments>
                                 <connections>
                                     <action selector="styleDidChange:" destination="2" eventType="valueChanged" id="ByI-Cf-CZl"/>
