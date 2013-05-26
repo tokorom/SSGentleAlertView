@@ -35,7 +35,6 @@
 				<int key="NSvFlags">292</int>
 				<string key="NSFrameSize">{73, 44}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<bool key="IBUIOpaque">NO</bool>
@@ -54,15 +53,15 @@
 				</object>
 				<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage">
 					<string key="NSClassName">NSImage</string>
-					<string key="NSResourceName">SSGentleAlertViewDefault.bundle/UIPopupAlertSheetButtonPress.png</string>
+					<string key="NSResourceName">SSGentleAlertViewNative.bundle/UIPopupAlertSheetButtonPress.png</string>
 				</object>
 				<object class="NSCustomResource" key="IBUIDisabledBackgroundImage">
 					<string key="NSClassName">NSImage</string>
-					<string key="NSResourceName">SSGentleAlertViewDefault.bundle/UIPopupAlertSheetDefaultButton.png</string>
+					<string key="NSResourceName">SSGentleAlertViewNative.bundle/UIPopupAlertSheetDefaultButton.png</string>
 				</object>
 				<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 					<string key="NSClassName">NSImage</string>
-					<string key="NSResourceName">SSGentleAlertViewDefault.bundle/UIPopupAlertSheetButton.png</string>
+					<string key="NSResourceName">SSGentleAlertViewNative.bundle/UIPopupAlertSheetButton.png</string>
 				</object>
 				<object class="IBUIFontDescription" key="IBUIFontDescription">
 					<int key="type">2</int>
@@ -108,7 +107,7 @@
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="0.0" key="2.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="3" key="2.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
@@ -122,9 +121,9 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="SSGentleAlertViewDefault.bundle/UIPopupAlertSheetButton.png">{16, 16}</string>
-			<string key="SSGentleAlertViewDefault.bundle/UIPopupAlertSheetButtonPress.png">{16, 16}</string>
-			<string key="SSGentleAlertViewDefault.bundle/UIPopupAlertSheetDefaultButton.png">{16, 16}</string>
+			<string key="SSGentleAlertViewNative.bundle/UIPopupAlertSheetButton.png">{16, 16}</string>
+			<string key="SSGentleAlertViewNative.bundle/UIPopupAlertSheetButtonPress.png">{16, 16}</string>
+			<string key="SSGentleAlertViewNative.bundle/UIPopupAlertSheetDefaultButton.png">{16, 16}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
 		<string key="IBCocoaTouchPluginVersion">2083</string>

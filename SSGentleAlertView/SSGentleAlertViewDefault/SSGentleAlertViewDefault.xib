@@ -100,16 +100,16 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">TITLE</string>
-								<object class="NSColor" key="IBUITextColor" id="752846878">
+								<object class="NSColor" key="IBUITextColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4yMzUyOTQxMTc2IDAuMjc0NTA5ODAzOSAwLjMxMzcyNTQ5MDIAA</bytes>
+								</object>
+								<nil key="IBUIHighlightedColor"/>
+								<object class="NSColor" key="IBUIShadowColor" id="752846878">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MQA</bytes>
 								</object>
-								<nil key="IBUIHighlightedColor"/>
-								<object class="NSColor" key="IBUIShadowColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MCAwLjQAA</bytes>
-								</object>
-								<string key="IBUIShadowOffset">{0, -2}</string>
+								<string key="IBUIShadowOffset">{0, 1}</string>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
 								<int key="IBUITextAlignment">1</int>
@@ -139,13 +139,13 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">MESSAGE</string>
-								<reference key="IBUITextColor" ref="752846878"/>
-								<nil key="IBUIHighlightedColor"/>
-								<object class="NSColor" key="IBUIShadowColor">
-									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MCAwLjQAA</bytes>
+								<object class="NSColor" key="IBUITextColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4yMzUyOTQxMTc2IDAuMjc0NTA5ODAzOSAwLjMxMzcyNTQ5MDIAA</bytes>
 								</object>
-								<string key="IBUIShadowOffset">{0, -2}</string>
+								<nil key="IBUIHighlightedColor"/>
+								<reference key="IBUIShadowColor" ref="752846878"/>
+								<string key="IBUIShadowOffset">{0, 1}</string>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
 								<int key="IBUITextAlignment">1</int>

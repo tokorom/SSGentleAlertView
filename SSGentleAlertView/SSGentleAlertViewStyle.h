@@ -7,4 +7,5 @@
 typedef enum {
   SSGentleAlertViewStyleDefault = 0,
   //SSGentleAlertViewStyleBlack   = 1,
+  SSGentleAlertViewStyleNative = 2,
 } SSGentleAlertViewStyle;

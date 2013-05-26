@@ -14,10 +14,11 @@
 @property (nonatomic, readonly, getter=isVisible) BOOL visible;
 @property (nonatomic) NSInteger cancelButtonIndex;
 
-@property (nonatomic) SSGentleAlertViewStyle style;
 @property (nonatomic) BOOL disappearWhenBackgroundClicked;
 
+- (id)initWithStyle:(SSGentleAlertViewStyle)style;
 - (id)initWithTitle:(NSString*)title message:(NSString*)message delegate:(id)delegate cancelButtonTitle:(NSString*)cancelButtonTitle otherButtonTitles:(NSString*)otherButtonTitles, ...;
+- (id)initWithStyle:(SSGentleAlertViewStyle)style title:(NSString*)title message:(NSString*)message delegate:(id)delegate cancelButtonTitle:(NSString*)cancelButtonTitle otherButtonTitles:(NSString*)otherButtonTitles, ...;
 
 - (void)show;
 - (NSInteger)addButtonWithTitle:(NSString*)title;

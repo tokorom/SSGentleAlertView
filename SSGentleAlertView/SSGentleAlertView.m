@@ -14,6 +14,7 @@
 @property (weak) IBOutlet UILabel* messageLabel;
 @property (strong) NSMutableArray* buttonCaptions;
 @property (assign) CGAffineTransform backupDialogTransform;
+@property (nonatomic) SSGentleAlertViewStyle style;
 @end 
 
 @implementation SSGentleAlertView
@@ -22,8 +23,16 @@
 
 - (id)init
 {
-  self = (id)[self.class gentleAlertViewFromNib];
+  if ((self = [self initWithStyle:SSGentleAlertViewStyleDefault])) {
+  }
+  return self;
+}
+
+- (id)initWithStyle:(SSGentleAlertViewStyle)style
+{
+  self = (id)[self.class gentleAlertViewFromNibForStyle:style];
   if (self) {
+    self.style = style;
     self.backgroundColor = [UIColor clearColor];
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
@@ -37,30 +46,47 @@
 
 - (id)initWithTitle:(NSString*)title message:(NSString*)message delegate:(id)delegate cancelButtonTitle:(NSString*)cancelButtonTitle otherButtonTitles:(NSString*)otherButtonTitles, ...
 {
-  if ((self = [self init])) {
-    self.delegate = delegate;
+  va_list args;
+  va_start(args, otherButtonTitles);
+  if ((self = [self initWithStyle:SSGentleAlertViewStyleDefault title:title message:message delegate:delegate cancelButtonTitle:cancelButtonTitle otherButtonTitle:otherButtonTitles args:args])) {
+  }
+  va_end(args);
+  return self;
+}
+
+- (id)initWithStyle:(SSGentleAlertViewStyle)style title:(NSString*)title message:(NSString*)message delegate:(id)delegate cancelButtonTitle:(NSString*)cancelButtonTitle otherButtonTitles:(NSString*)otherButtonTitles, ...
+{
+  va_list args;
+  va_start(args, otherButtonTitles);
+  if ((self = [self initWithStyle:style title:title message:message delegate:delegate cancelButtonTitle:cancelButtonTitle otherButtonTitle:otherButtonTitles args:args])) {
+  }
+  va_end(args);
+  return self;
+}
+
+- (id)initWithStyle:(SSGentleAlertViewStyle)style title:(NSString*)title message:(NSString*)message delegate:(id)delegate cancelButtonTitle:(NSString*)cancelButtonTitle otherButtonTitle:(NSString*)otherButtonTitle args:(va_list)args
+{
+  if ((self = [self initWithStyle:style])) {
     self.title = title;
     self.message = message;
+    self.delegate = delegate;
     if (nil != cancelButtonTitle) {
       self.cancelButtonIndex = 0;
       [self addButtonWithTitle:cancelButtonTitle];
     }
 
-    va_list args;
-    va_start(args, otherButtonTitles);
-    NSString* title = otherButtonTitles;
+    NSString* title = otherButtonTitle;
     while (title) {
       [self addButtonWithTitle:title];
       title = va_arg(args, typeof(NSString*));
     }
-    va_end(args);
   }
   return self;
 }
 
-+ (UIView*)gentleAlertViewFromNib
++ (UIView*)gentleAlertViewFromNibForStyle:(SSGentleAlertViewStyle)style
 {
-  UINib* nib = [UINib nibWithNibName:@"SSGentleAlertView" bundle:nil];
+  UINib* nib = [UINib nibWithNibName:[self.class nibNameForStyle:style] bundle:nil];
   NSArray* instances = [nib instantiateWithOwner:self options:nil];
   if (0 < instances.count) {
     return instances[0];
@@ -136,6 +162,7 @@
 {
   // Dialog
 
+  [self.dialogView setViewStyle:self.style];
   [self.dialogView setupWithButtonCaptions:self.buttonCaptions];
 
   // Background
@@ -215,6 +242,14 @@
 {
   self.alpha = 0.0;
   self.dialogView.transform = CGAffineTransformScale(self.dialogView.transform, 0.25, 0.25);
+}
+
++ (NSString*)nibNameForStyle:(SSGentleAlertViewStyle)style
+{
+  switch (style) {
+    case SSGentleAlertViewStyleNative: return @"SSGentleAlertViewNative";
+    default: return @"SSGentleAlertViewDefault";
+  }
 }
 
 @end

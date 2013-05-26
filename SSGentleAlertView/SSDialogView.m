@@ -5,7 +5,6 @@
 //
 
 #import "SSDialogView.h"
-#import "SSGentleAlertViewLayout.h"
 
 @interface SSDialogView ()
 @property (weak) IBOutlet UILabel* titleLabel;
@@ -17,6 +16,9 @@
 @property (assign) CGFloat defaultMessageLabelHeight;
 @property (assign) CGFloat defaultButtonContainerViewY;
 @property (assign) CGFloat defaultButtonContainerViewHeight;
+@property (strong) UIColor* buttonLabelShadowColor;
+@property (assign) CGSize buttonLabelShadowOffset;
+@property (nonatomic) SSGentleAlertViewStyle style;
 @end 
 
 @implementation SSDialogView
@@ -48,9 +50,9 @@
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-+ (UIButton*)buttonFromNib
++ (UIButton*)buttonFromNibForStyle:(SSGentleAlertViewStyle)style
 {
-  UINib* nib = [UINib nibWithNibName:@"SSGentleAlertButton" bundle:nil];
+  UINib* nib = [UINib nibWithNibName:[self.class nibNameForStyle:style] bundle:nil];
   NSArray* instances = [nib instantiateWithOwner:self options:nil];
   if (0 < instances.count) {
     return instances[0];
@@ -105,13 +107,13 @@
   NSMutableArray* buttons = [NSMutableArray arrayWithCapacity:buttonCaptions.count];
   NSUInteger index = 0;
   for (NSString* buttonCaption in buttonCaptions) {
-    UIButton* button = [self.class buttonFromNib];
+    UIButton* button = [self.class buttonFromNibForStyle:self.style];
     button.tag = index++;
     [button addTarget:self.superview
                action:@selector(buttonDidPush:)
      forControlEvents:UIControlEventTouchUpInside];
     [button setTitle:buttonCaption forState:UIControlStateNormal];
-    [self.class setupButton:button];
+    [self setupButton:button];
     [buttons addObject:button];
   }
 
@@ -160,6 +162,21 @@
   [self.class setDefaultButtonImageToButton:lastButton];
 }
 
+- (void)setViewStyle:(SSGentleAlertViewStyle)style
+{
+  self.style = style;
+  NSString* bundlePath = [[NSBundle mainBundle] pathForResource:[self.class bundleNameForStyle:style] ofType:@"bundle"];
+  NSBundle* bundle = [NSBundle bundleWithPath:bundlePath];
+  NSString* plistPath = [bundle pathForResource:@"Layout" ofType:@"plist"];
+  NSDictionary* layoutSetting = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+
+  self.buttonLabelShadowColor = [UIColor colorWithRed:[layoutSetting[@"ButtonShadowColorR"] floatValue]
+                                                green:[layoutSetting[@"ButtonShadowColorG"] floatValue]
+                                                 blue:[layoutSetting[@"ButtonShadowColorB"] floatValue]
+                                                alpha:[layoutSetting[@"ButtonShadowColorA"] floatValue]];
+  self.buttonLabelShadowOffset = CGSizeMake([layoutSetting[@"ButtonShadowOffsetX"] floatValue], [layoutSetting[@"ButtonShadowOffsetY"] floatValue]);
+}
+
 #pragma mark - UIView Methods
 
 - (CGSize)sizeThatFits:(CGSize)size
@@ -184,10 +201,10 @@
   return [image resizableImageWithCapInsets:capInsets];
 }
 
-+ (void)setupButton:(UIButton*)button
+- (void)setupButton:(UIButton*)button
 {
-  [button setTitleShadowColor:kGentleAlertViewButtonTitleShadowColor forState:UIControlStateNormal];
-  button.titleLabel.shadowOffset = kGentleAlertViewButtonTitleShadowOffset;
+  [button setTitleShadowColor:self.buttonLabelShadowColor forState:UIControlStateNormal];
+  button.titleLabel.shadowOffset = self.buttonLabelShadowOffset;
   [self.class setupBackgroundImagesForButton:button];
 }
 
@@ -238,6 +255,22 @@
     } else {
       self.transform = CGAffineTransformIdentity;
     }
+}
+
++ (NSString*)bundleNameForStyle:(SSGentleAlertViewStyle)style
+{
+  switch (style) {
+    case SSGentleAlertViewStyleNative: return @"SSGentleAlertViewNative";
+    default: return @"SSGentleAlertViewDefault";
+  }
+}
+
++ (NSString*)nibNameForStyle:(SSGentleAlertViewStyle)style
+{
+  switch (style) {
+    case SSGentleAlertViewStyleNative: return @"SSGentleAlertButtonNative";
+    default: return @"SSGentleAlertButtonDefault";
+  }
 }
 
 @end

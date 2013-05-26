@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062F70BF175197CC00EE9F53 /* SSGentleAlertButtonDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062F70B6175197CC00EE9F53 /* SSGentleAlertButtonDefault.xib */; };
+		062F70C0175197CC00EE9F53 /* SSGentleAlertViewDefault.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 062F70B7175197CC00EE9F53 /* SSGentleAlertViewDefault.bundle */; };
+		062F70C1175197CC00EE9F53 /* SSGentleAlertViewDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062F70B8175197CC00EE9F53 /* SSGentleAlertViewDefault.xib */; };
+		062F70C2175197CC00EE9F53 /* SSGentleAlertButtonNative.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062F70BB175197CC00EE9F53 /* SSGentleAlertButtonNative.xib */; };
+		062F70C3175197CC00EE9F53 /* SSGentleAlertViewNative.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 062F70BC175197CC00EE9F53 /* SSGentleAlertViewNative.bundle */; };
+		062F70C4175197CC00EE9F53 /* SSGentleAlertViewNative.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062F70BD175197CC00EE9F53 /* SSGentleAlertViewNative.xib */; };
 		0632F0BE175082DD00CE8A0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0BD175082DD00CE8A0F /* UIKit.framework */; };
 		0632F0C0175082DD00CE8A0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0BF175082DD00CE8A0F /* Foundation.framework */; };
 		0632F0C2175082DD00CE8A0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0C1175082DD00CE8A0F /* CoreGraphics.framework */; };
-		0632F0E2175082DE00CE8A0F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0E1175082DE00CE8A0F /* SenTestingKit.framework */; };
-		0632F0E3175082DE00CE8A0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0BD175082DD00CE8A0F /* UIKit.framework */; };
-		0632F0E4175082DE00CE8A0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0BF175082DD00CE8A0F /* Foundation.framework */; };
-		0632F0EC175082DE00CE8A0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0632F0EA175082DE00CE8A0F /* InfoPlist.strings */; };
-		0632F0EF175082DE00CE8A0F /* SSGentleAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F0EE175082DE00CE8A0F /* SSGentleAlertViewTests.m */; };
 		0632F107175083FD00CE8A0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F0FA175083FD00CE8A0F /* AppDelegate.m */; };
 		0632F108175083FD00CE8A0F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0632F0FB175083FD00CE8A0F /* Default-568h@2x.png */; };
 		0632F109175083FD00CE8A0F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0632F0FC175083FD00CE8A0F /* Default.png */; };
@@ -22,41 +23,24 @@
 		0632F10B175083FD00CE8A0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0632F0FE175083FD00CE8A0F /* InfoPlist.strings */; };
 		0632F10C175083FD00CE8A0F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0632F100175083FD00CE8A0F /* MainStoryboard.storyboard */; };
 		0632F10D175083FD00CE8A0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F102175083FD00CE8A0F /* main.m */; };
-		0632F10E175083FD00CE8A0F /* SSGentleAlertView-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0632F103175083FD00CE8A0F /* SSGentleAlertView-Info.plist */; };
 		0632F10F175083FD00CE8A0F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F106175083FD00CE8A0F /* ViewController.m */; };
 		0632F1181750952200CE8A0F /* SSDialogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F1121750952200CE8A0F /* SSDialogView.m */; };
-		0632F1191750952200CE8A0F /* SSDialogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F1121750952200CE8A0F /* SSDialogView.m */; };
-		0632F11A1750952200CE8A0F /* SSGentleAlertButtonDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0632F1131750952200CE8A0F /* SSGentleAlertButtonDefault.xib */; };
-		0632F11B1750952200CE8A0F /* SSGentleAlertButtonDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0632F1131750952200CE8A0F /* SSGentleAlertButtonDefault.xib */; };
-		0632F11C1750952200CE8A0F /* SSGentleAlertViewDefault.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0632F1141750952200CE8A0F /* SSGentleAlertViewDefault.bundle */; };
-		0632F11D1750952200CE8A0F /* SSGentleAlertViewDefault.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0632F1141750952200CE8A0F /* SSGentleAlertViewDefault.bundle */; };
 		0632F11E1750952200CE8A0F /* SSGentleAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F1161750952200CE8A0F /* SSGentleAlertView.m */; };
-		0632F11F1750952200CE8A0F /* SSGentleAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F1161750952200CE8A0F /* SSGentleAlertView.m */; };
-		0632F1201750952200CE8A0F /* SSGentleAlertViewDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0632F1171750952200CE8A0F /* SSGentleAlertViewDefault.xib */; };
-		0632F1211750952200CE8A0F /* SSGentleAlertViewDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0632F1171750952200CE8A0F /* SSGentleAlertViewDefault.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		0632F0E5175082DE00CE8A0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0632F0B2175082DD00CE8A0F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0632F0B9175082DD00CE8A0F;
-			remoteInfo = SSGentleAlertView;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		062F70B6175197CC00EE9F53 /* SSGentleAlertButtonDefault.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertButtonDefault.xib; sourceTree = "<group>"; };
+		062F70B7175197CC00EE9F53 /* SSGentleAlertViewDefault.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSGentleAlertViewDefault.bundle; sourceTree = "<group>"; };
+		062F70B8175197CC00EE9F53 /* SSGentleAlertViewDefault.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertViewDefault.xib; sourceTree = "<group>"; };
+		062F70BB175197CC00EE9F53 /* SSGentleAlertButtonNative.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertButtonNative.xib; sourceTree = "<group>"; };
+		062F70BC175197CC00EE9F53 /* SSGentleAlertViewNative.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSGentleAlertViewNative.bundle; sourceTree = "<group>"; };
+		062F70BD175197CC00EE9F53 /* SSGentleAlertViewNative.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertViewNative.xib; sourceTree = "<group>"; };
+		062F70BE175197CC00EE9F53 /* SSGentleAlertViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSGentleAlertViewStyle.h; sourceTree = "<group>"; };
 		0632F0BA175082DD00CE8A0F /* SSGentleAlertViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSGentleAlertViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0632F0BD175082DD00CE8A0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0632F0BF175082DD00CE8A0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0632F0C1175082DD00CE8A0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0632F0E0175082DE00CE8A0F /* SSGentleAlertViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSGentleAlertViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0632F0E1175082DE00CE8A0F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0632F0E9175082DE00CE8A0F /* SSGentleAlertViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SSGentleAlertViewTests-Info.plist"; sourceTree = "<group>"; };
-		0632F0EB175082DE00CE8A0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0632F0ED175082DE00CE8A0F /* SSGentleAlertViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSGentleAlertViewTests.h; sourceTree = "<group>"; };
-		0632F0EE175082DE00CE8A0F /* SSGentleAlertViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSGentleAlertViewTests.m; sourceTree = "<group>"; };
 		0632F0F9175083FD00CE8A0F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0632F0FA175083FD00CE8A0F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0632F0FB175083FD00CE8A0F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -71,11 +55,8 @@
 		0632F106175083FD00CE8A0F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0632F1111750952200CE8A0F /* SSDialogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDialogView.h; sourceTree = "<group>"; };
 		0632F1121750952200CE8A0F /* SSDialogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDialogView.m; sourceTree = "<group>"; };
-		0632F1131750952200CE8A0F /* SSGentleAlertButtonDefault.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertButtonDefault.xib; sourceTree = "<group>"; };
-		0632F1141750952200CE8A0F /* SSGentleAlertViewDefault.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSGentleAlertViewDefault.bundle; sourceTree = "<group>"; };
 		0632F1151750952200CE8A0F /* SSGentleAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSGentleAlertView.h; sourceTree = "<group>"; };
 		0632F1161750952200CE8A0F /* SSGentleAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSGentleAlertView.m; sourceTree = "<group>"; };
-		0632F1171750952200CE8A0F /* SSGentleAlertViewDefault.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertViewDefault.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,25 +70,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0632F0DC175082DE00CE8A0F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0632F0E2175082DE00CE8A0F /* SenTestingKit.framework in Frameworks */,
-				0632F0E3175082DE00CE8A0F /* UIKit.framework in Frameworks */,
-				0632F0E4175082DE00CE8A0F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		062F70B5175197CC00EE9F53 /* SSGentleAlertViewDefault */ = {
+			isa = PBXGroup;
+			children = (
+				062F70B6175197CC00EE9F53 /* SSGentleAlertButtonDefault.xib */,
+				062F70B7175197CC00EE9F53 /* SSGentleAlertViewDefault.bundle */,
+				062F70B8175197CC00EE9F53 /* SSGentleAlertViewDefault.xib */,
+			);
+			path = SSGentleAlertViewDefault;
+			sourceTree = "<group>";
+		};
+		062F70BA175197CC00EE9F53 /* SSGentleAlertViewNative */ = {
+			isa = PBXGroup;
+			children = (
+				062F70BB175197CC00EE9F53 /* SSGentleAlertButtonNative.xib */,
+				062F70BC175197CC00EE9F53 /* SSGentleAlertViewNative.bundle */,
+				062F70BD175197CC00EE9F53 /* SSGentleAlertViewNative.xib */,
+			);
+			path = SSGentleAlertViewNative;
+			sourceTree = "<group>";
+		};
 		0632F0B1175082DD00CE8A0F = {
 			isa = PBXGroup;
 			children = (
 				0632F1101750952200CE8A0F /* SSGentleAlertView */,
 				0632F0F8175083FD00CE8A0F /* SSGentleAlertViewSample */,
-				0632F0E7175082DE00CE8A0F /* SSGentleAlertViewTests */,
 				0632F0BC175082DD00CE8A0F /* Frameworks */,
 				0632F0BB175082DD00CE8A0F /* Products */,
 			);
@@ -117,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				0632F0BA175082DD00CE8A0F /* SSGentleAlertViewSample.app */,
-				0632F0E0175082DE00CE8A0F /* SSGentleAlertViewTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,25 +120,6 @@
 				0632F0E1175082DE00CE8A0F /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0632F0E7175082DE00CE8A0F /* SSGentleAlertViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				0632F0ED175082DE00CE8A0F /* SSGentleAlertViewTests.h */,
-				0632F0EE175082DE00CE8A0F /* SSGentleAlertViewTests.m */,
-				0632F0E8175082DE00CE8A0F /* Supporting Files */,
-			);
-			path = SSGentleAlertViewTests;
-			sourceTree = "<group>";
-		};
-		0632F0E8175082DE00CE8A0F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0632F0E9175082DE00CE8A0F /* SSGentleAlertViewTests-Info.plist */,
-				0632F0EA175082DE00CE8A0F /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		0632F0F8175083FD00CE8A0F /* SSGentleAlertViewSample */ = {
@@ -174,13 +144,13 @@
 		0632F1101750952200CE8A0F /* SSGentleAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				062F70BE175197CC00EE9F53 /* SSGentleAlertViewStyle.h */,
 				0632F1111750952200CE8A0F /* SSDialogView.h */,
 				0632F1121750952200CE8A0F /* SSDialogView.m */,
-				0632F1141750952200CE8A0F /* SSGentleAlertViewDefault.bundle */,
 				0632F1151750952200CE8A0F /* SSGentleAlertView.h */,
 				0632F1161750952200CE8A0F /* SSGentleAlertView.m */,
-				0632F1171750952200CE8A0F /* SSGentleAlertViewDefault.xib */,
-				0632F1131750952200CE8A0F /* SSGentleAlertButtonDefault.xib */,
+				062F70B5175197CC00EE9F53 /* SSGentleAlertViewDefault */,
+				062F70BA175197CC00EE9F53 /* SSGentleAlertViewNative */,
 			);
 			path = SSGentleAlertView;
 			sourceTree = "<group>";
@@ -205,25 +175,6 @@
 			productReference = 0632F0BA175082DD00CE8A0F /* SSGentleAlertViewSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0632F0DF175082DE00CE8A0F /* SSGentleAlertViewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0632F0F5175082DE00CE8A0F /* Build configuration list for PBXNativeTarget "SSGentleAlertViewTests" */;
-			buildPhases = (
-				0632F0DB175082DE00CE8A0F /* Sources */,
-				0632F0DC175082DE00CE8A0F /* Frameworks */,
-				0632F0DD175082DE00CE8A0F /* Resources */,
-				0632F0DE175082DE00CE8A0F /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0632F0E6175082DE00CE8A0F /* PBXTargetDependency */,
-			);
-			name = SSGentleAlertViewTests;
-			productName = SSGentleAlertViewTests;
-			productReference = 0632F0E0175082DE00CE8A0F /* SSGentleAlertViewTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -246,7 +197,6 @@
 			projectRoot = "";
 			targets = (
 				0632F0B9175082DD00CE8A0F /* SSGentleAlertViewSample */,
-				0632F0DF175082DE00CE8A0F /* SSGentleAlertViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -261,41 +211,16 @@
 				0632F10A175083FD00CE8A0F /* Default@2x.png in Resources */,
 				0632F10B175083FD00CE8A0F /* InfoPlist.strings in Resources */,
 				0632F10C175083FD00CE8A0F /* MainStoryboard.storyboard in Resources */,
-				0632F10E175083FD00CE8A0F /* SSGentleAlertView-Info.plist in Resources */,
-				0632F11A1750952200CE8A0F /* SSGentleAlertButtonDefault.xib in Resources */,
-				0632F11C1750952200CE8A0F /* SSGentleAlertViewDefault.bundle in Resources */,
-				0632F1201750952200CE8A0F /* SSGentleAlertViewDefault.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0632F0DD175082DE00CE8A0F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0632F0EC175082DE00CE8A0F /* InfoPlist.strings in Resources */,
-				0632F11B1750952200CE8A0F /* SSGentleAlertButtonDefault.xib in Resources */,
-				0632F11D1750952200CE8A0F /* SSGentleAlertViewDefault.bundle in Resources */,
-				0632F1211750952200CE8A0F /* SSGentleAlertViewDefault.xib in Resources */,
+				062F70BF175197CC00EE9F53 /* SSGentleAlertButtonDefault.xib in Resources */,
+				062F70C0175197CC00EE9F53 /* SSGentleAlertViewDefault.bundle in Resources */,
+				062F70C1175197CC00EE9F53 /* SSGentleAlertViewDefault.xib in Resources */,
+				062F70C2175197CC00EE9F53 /* SSGentleAlertButtonNative.xib in Resources */,
+				062F70C3175197CC00EE9F53 /* SSGentleAlertViewNative.bundle in Resources */,
+				062F70C4175197CC00EE9F53 /* SSGentleAlertViewNative.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0632F0DE175082DE00CE8A0F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0632F0B6175082DD00CE8A0F /* Sources */ = {
@@ -310,35 +235,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0632F0DB175082DE00CE8A0F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0632F0EF175082DE00CE8A0F /* SSGentleAlertViewTests.m in Sources */,
-				0632F1191750952200CE8A0F /* SSDialogView.m in Sources */,
-				0632F11F1750952200CE8A0F /* SSGentleAlertView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		0632F0E6175082DE00CE8A0F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0632F0B9175082DD00CE8A0F /* SSGentleAlertViewSample */;
-			targetProxy = 0632F0E5175082DE00CE8A0F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		0632F0EA175082DE00CE8A0F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0632F0EB175082DE00CE8A0F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		0632F0FE175083FD00CE8A0F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,40 +337,6 @@
 			};
 			name = Release;
 		};
-		0632F0F6175082DE00CE8A0F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SSGentleAlertView.app/SSGentleAlertView";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SSGentleAlertView/SSGentleAlertView-Prefix.pch";
-				INFOPLIST_FILE = "SSGentleAlertViewTests/SSGentleAlertViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		0632F0F7175082DE00CE8A0F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SSGentleAlertView.app/SSGentleAlertView";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SSGentleAlertView/SSGentleAlertView-Prefix.pch";
-				INFOPLIST_FILE = "SSGentleAlertViewTests/SSGentleAlertViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -489,15 +354,6 @@
 			buildConfigurations = (
 				0632F0F3175082DE00CE8A0F /* Debug */,
 				0632F0F4175082DE00CE8A0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0632F0F5175082DE00CE8A0F /* Build configuration list for PBXNativeTarget "SSGentleAlertViewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0632F0F6175082DE00CE8A0F /* Debug */,
-				0632F0F7175082DE00CE8A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
