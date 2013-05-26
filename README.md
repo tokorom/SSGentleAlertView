@@ -1,5 +1,3 @@
-<small aligin='right'>[Japanese](README.ja.md)</small>
------
 # SSGentleAlertView
 
 * It is gnetler than UIAlertView
@@ -12,15 +10,15 @@ Designed by [Atsushi Morino](https://twitter.com/limonomori)
 
 ### Default
 
-{% img center http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewDefault.png %}
+![SSGentleAlertViewDefault](http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewDefault.png)
 
 ### Black
 
-{% img center http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewBlack.png %}
+![SSGentleAlertViewBlack](http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewBlack.png)
 
 ### Native
 
-{% img center http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewNative.png %}
+![SSGentleAlertViewNative](http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewNative.png)
 
 ## Supported UIAlertView's properties and methods
 
@@ -71,9 +69,9 @@ alert.cancelButtonIndex = 0;
 [alert show];
 ```
 
-### Sample for customizing Appearance
+## Sample for customizing Appearance
 
-{% img center http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewCustomize.png %}
+![SSGentleAlertViewCustomize](http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewCustomize.png)
 
 ``` objc
 // #import "SSGentleAlertView.h"
@@ -95,3 +93,7 @@ UIButton* button = [alert buttonBase];
 [alert setButtonBase:button];
 [alert setDefaultButtonBase:button];
 ```
+
+-----
+
+<small aligin='right'>English | [Japanese](README.ja.md)</small>
