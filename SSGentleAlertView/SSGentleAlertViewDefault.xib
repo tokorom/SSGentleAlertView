@@ -133,7 +133,6 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="368213898"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<reference key="IBUIBackgroundColor" ref="486764763"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -142,6 +141,11 @@
 								<string key="IBUIText">MESSAGE</string>
 								<reference key="IBUITextColor" ref="752846878"/>
 								<nil key="IBUIHighlightedColor"/>
+								<object class="NSColor" key="IBUIShadowColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MCAwLjQAA</bytes>
+								</object>
+								<string key="IBUIShadowOffset">{0, -2}</string>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<int key="IBUINumberOfLines">0</int>
 								<int key="IBUITextAlignment">1</int>
@@ -163,7 +167,6 @@
 								<string key="NSFrame">{{12, 78}, {267, 44}}</string>
 								<reference key="NSSuperview" ref="17347022"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="486764763"/>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
