@@ -13,6 +13,9 @@
 		062F70C2175197CC00EE9F53 /* SSGentleAlertButtonNative.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062F70BB175197CC00EE9F53 /* SSGentleAlertButtonNative.xib */; };
 		062F70C3175197CC00EE9F53 /* SSGentleAlertViewNative.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 062F70BC175197CC00EE9F53 /* SSGentleAlertViewNative.bundle */; };
 		062F70C4175197CC00EE9F53 /* SSGentleAlertViewNative.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062F70BD175197CC00EE9F53 /* SSGentleAlertViewNative.xib */; };
+		062F70CD1751B5C700EE9F53 /* SSGentleAlertButtonBlack.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062F70CA1751B5C700EE9F53 /* SSGentleAlertButtonBlack.xib */; };
+		062F70CE1751B5C700EE9F53 /* SSGentleAlertViewBlack.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 062F70CB1751B5C700EE9F53 /* SSGentleAlertViewBlack.bundle */; };
+		062F70CF1751B5C700EE9F53 /* SSGentleAlertViewBlack.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062F70CC1751B5C700EE9F53 /* SSGentleAlertViewBlack.xib */; };
 		0632F0BE175082DD00CE8A0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0BD175082DD00CE8A0F /* UIKit.framework */; };
 		0632F0C0175082DD00CE8A0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0BF175082DD00CE8A0F /* Foundation.framework */; };
 		0632F0C2175082DD00CE8A0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0632F0C1175082DD00CE8A0F /* CoreGraphics.framework */; };
@@ -36,6 +39,9 @@
 		062F70BC175197CC00EE9F53 /* SSGentleAlertViewNative.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSGentleAlertViewNative.bundle; sourceTree = "<group>"; };
 		062F70BD175197CC00EE9F53 /* SSGentleAlertViewNative.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertViewNative.xib; sourceTree = "<group>"; };
 		062F70BE175197CC00EE9F53 /* SSGentleAlertViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSGentleAlertViewStyle.h; sourceTree = "<group>"; };
+		062F70CA1751B5C700EE9F53 /* SSGentleAlertButtonBlack.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertButtonBlack.xib; sourceTree = "<group>"; };
+		062F70CB1751B5C700EE9F53 /* SSGentleAlertViewBlack.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSGentleAlertViewBlack.bundle; sourceTree = "<group>"; };
+		062F70CC1751B5C700EE9F53 /* SSGentleAlertViewBlack.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSGentleAlertViewBlack.xib; sourceTree = "<group>"; };
 		0632F0BA175082DD00CE8A0F /* SSGentleAlertViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSGentleAlertViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0632F0BD175082DD00CE8A0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0632F0BF175082DD00CE8A0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +97,16 @@
 				062F70BD175197CC00EE9F53 /* SSGentleAlertViewNative.xib */,
 			);
 			path = SSGentleAlertViewNative;
+			sourceTree = "<group>";
+		};
+		062F70C91751B5C700EE9F53 /* SSGentleAlertViewBlack */ = {
+			isa = PBXGroup;
+			children = (
+				062F70CA1751B5C700EE9F53 /* SSGentleAlertButtonBlack.xib */,
+				062F70CB1751B5C700EE9F53 /* SSGentleAlertViewBlack.bundle */,
+				062F70CC1751B5C700EE9F53 /* SSGentleAlertViewBlack.xib */,
+			);
+			path = SSGentleAlertViewBlack;
 			sourceTree = "<group>";
 		};
 		0632F0B1175082DD00CE8A0F = {
@@ -150,6 +166,7 @@
 				0632F1151750952200CE8A0F /* SSGentleAlertView.h */,
 				0632F1161750952200CE8A0F /* SSGentleAlertView.m */,
 				062F70B5175197CC00EE9F53 /* SSGentleAlertViewDefault */,
+				062F70C91751B5C700EE9F53 /* SSGentleAlertViewBlack */,
 				062F70BA175197CC00EE9F53 /* SSGentleAlertViewNative */,
 			);
 			path = SSGentleAlertView;
@@ -217,6 +234,9 @@
 				062F70C2175197CC00EE9F53 /* SSGentleAlertButtonNative.xib in Resources */,
 				062F70C3175197CC00EE9F53 /* SSGentleAlertViewNative.bundle in Resources */,
 				062F70C4175197CC00EE9F53 /* SSGentleAlertViewNative.xib in Resources */,
+				062F70CD1751B5C700EE9F53 /* SSGentleAlertButtonBlack.xib in Resources */,
+				062F70CE1751B5C700EE9F53 /* SSGentleAlertViewBlack.bundle in Resources */,
+				062F70CF1751B5C700EE9F53 /* SSGentleAlertViewBlack.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

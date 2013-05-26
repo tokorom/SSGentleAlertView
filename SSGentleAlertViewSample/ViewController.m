@@ -9,6 +9,7 @@
 
 @interface ViewController ()
 @property (nonatomic) SSGentleAlertViewStyle style;
+@property (weak) IBOutlet UISegmentedControl* segmentedControl;
 @end 
 
 @implementation ViewController
@@ -78,6 +79,9 @@
 {
   switch (segmentedControl.selectedSegmentIndex) {
     case 1:
+      [self updateStyle:SSGentleAlertViewStyleBlack];
+      break;
+    case 2:
       [self updateStyle:SSGentleAlertViewStyleNative];
       break;
     default:
@@ -92,10 +96,17 @@
     case SSGentleAlertViewStyleNative:
       self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
       self.navigationController.toolbar.barStyle = UIBarStyleDefault;
+      self.segmentedControl.tintColor = nil;
+      break;
+    case SSGentleAlertViewStyleBlack:
+      self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+      self.navigationController.toolbar.barStyle = UIBarStyleBlack;
+      self.segmentedControl.tintColor = UIColor.blackColor;
       break;
     default:
       self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
       self.navigationController.toolbar.barStyle = UIBarStyleDefault;
+      self.segmentedControl.tintColor = nil;
       break;
   }
   self.style = style;

@@ -261,6 +261,7 @@
 {
   switch (style) {
     case SSGentleAlertViewStyleNative: return @"SSGentleAlertViewNative";
+    case SSGentleAlertViewStyleBlack: return @"SSGentleAlertViewBlack";
     default: return @"SSGentleAlertViewDefault";
   }
 }
@@ -269,6 +270,7 @@
 {
   switch (style) {
     case SSGentleAlertViewStyleNative: return @"SSGentleAlertButtonNative";
+    case SSGentleAlertViewStyleBlack: return @"SSGentleAlertButtonBlack";
     default: return @"SSGentleAlertButtonDefault";
   }
 }

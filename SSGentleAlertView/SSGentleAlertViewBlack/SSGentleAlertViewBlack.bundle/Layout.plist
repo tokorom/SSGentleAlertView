@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>ButtonShadowColorR</key>
+  <real>0</real>
+  <key>ButtonShadowColorG</key>
+  <real>0</real>
+  <key>ButtonShadowColorB</key>
+  <real>0</real>
+  <key>ButtonShadowColorA</key>
+  <real>0.4</real>
+  <key>ButtonShadowOffsetX</key>
+  <real>0.0</real>
+  <key>ButtonShadowOffsetY</key>
+  <real>-2.0</real>
+</dict>
+</plist>
