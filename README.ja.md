@@ -1,5 +1,3 @@
-<small aligin='right'>[English](README.md)</small>
------
 # SSGentleAlertView
 
 SSGentleAlertViewは、
@@ -14,15 +12,15 @@ Designed by [Atsushi Morino](https://twitter.com/limonomori)
 
 ### Default
 
-{% img center http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewDefault.png %}
+![SSGentleAlertViewDefault](http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewDefault.png)
 
 ### Black
 
-{% img center http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewBlack.png %}
+![SSGentleAlertViewBlack](http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewBlack.png)
 
 ### Native
 
-{% img center http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewNative.png %}
+![SSGentleAlertViewNative](http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewNative.png)
 
 ## サポートしているUIAlertViewのプロパティとメソッド
 
@@ -73,9 +71,9 @@ alert.cancelButtonIndex = 0;
 [alert show];
 ```
 
-### Appearanceの変更例
+## Appearanceの変更例
 
-{% img center http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewCustomize.png %}
+![SSGentleAlertViewCustomize](http://dl.dropbox.com/u/10351676/images/SSGentleAlertViewCustomize.png)
 
 ``` objc
 // #import "SSGentleAlertView.h"
@@ -97,3 +95,7 @@ UIButton* button = [alert buttonBase];
 [alert setButtonBase:button];
 [alert setDefaultButtonBase:button];
 ```
+
+-----
+
+<small aligin='right'>[English](README.md) | Japanese</small>
