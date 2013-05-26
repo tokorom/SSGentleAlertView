@@ -124,6 +124,11 @@
   return !self.hidden;
 }
 
+- (NSInteger)numberOfButtons
+{
+  return self.buttonCaptions.count;
+}
+
 #pragma mark - Public Interface
 
 - (void)show
@@ -155,6 +160,11 @@
 {
   [self.buttonCaptions addObject:title];
   return self.buttonCaptions.count - 1;
+}
+
+- (NSString*)buttonTitleAtIndex:(NSInteger)buttonIndex
+{
+  return self.buttonCaptions[buttonIndex];
 }
 
 #pragma mark - Appearance

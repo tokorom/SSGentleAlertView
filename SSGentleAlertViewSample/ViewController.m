@@ -73,10 +73,10 @@
   alert.delegate = self;
   alert.title = @"SSGentleAlertView";
   alert.message = @"This is GentleAlertView!\nUIAlertView is too strong to use for ordinary messages.";
-  alert.cancelButtonIndex = 2;
   [alert addButtonWithTitle:@"OK"];
   [alert addButtonWithTitle:@"Later"];
   [alert addButtonWithTitle:@"Cancel"];
+  alert.cancelButtonIndex = alert.numberOfButtons - 1;
   if (self.isOriginal) {
     [self.class setAppearanceToGentleAlertView:alert];
     alert.disappearWhenBackgroundClicked = YES;
@@ -147,12 +147,6 @@
   [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
   [button setTitleColor:UIColor.whiteColor forState:UIControlStateHighlighted];
   [alertView setButtonBase:button];
-
-  button = [alertView defaultButtonBase];
-  [button setBackgroundImage:[SSDialogView resizableImage:[UIImage imageNamed:@"dialog_btn_normal"]] forState:UIControlStateNormal];
-  [button setBackgroundImage:[SSDialogView resizableImage:[UIImage imageNamed:@"dialog_btn_pressed"]] forState:UIControlStateHighlighted];
-  [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-  [button setTitleColor:UIColor.whiteColor forState:UIControlStateHighlighted];
   [alertView setDefaultButtonBase:button];
 }
 

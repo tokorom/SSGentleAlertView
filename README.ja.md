@@ -32,10 +32,12 @@ Designed by [Atsushi Morino](https://twitter.com/limonomori)
 @property (nonatomic, copy) NSString* message;
 @property (nonatomic, readonly, getter=isVisible) BOOL visible;
 @property (nonatomic) NSInteger cancelButtonIndex;
+@property (nonatomic, readonly) NSInteger numberOfButtons;
 
 - (id)initWithTitle:(NSString*)title message:(NSString*)message delegate:(id)delegate cancelButtonTitle:(NSString*)cancelButtonTitle otherButtonTitles:(NSString*)otherButtonTitles, ...;
 - (void)show;
 - (NSInteger)addButtonWithTitle:(NSString*)title;
+- (NSString*)buttonTitleAtIndex:(NSInteger)buttonIndex;
 ```
 
 ## 追加機能

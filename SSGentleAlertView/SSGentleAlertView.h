@@ -13,6 +13,7 @@
 @property (nonatomic, copy) NSString* message;
 @property (nonatomic, readonly, getter=isVisible) BOOL visible;
 @property (nonatomic) NSInteger cancelButtonIndex;
+@property (nonatomic, readonly) NSInteger numberOfButtons;
 
 @property (nonatomic) BOOL disappearWhenBackgroundClicked;
 
@@ -22,6 +23,7 @@
 
 - (void)show;
 - (NSInteger)addButtonWithTitle:(NSString*)title;
+- (NSString*)buttonTitleAtIndex:(NSInteger)buttonIndex;
 
 @end
 
