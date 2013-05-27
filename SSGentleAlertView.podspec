@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "SSGentleAlertView"
   s.version      = "1.0.0"
-  s.summary      = "This is gnetler than UIAlertView and This can be changed the Appearance unlike UIAlertView."
+  s.summary      = "This is gentler than UIAlertView and This can be changed the Appearance unlike UIAlertView."
   s.homepage     = "https://github.com/tokorom/SSGentleAlertView"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "tokorom" => "tokorom@gmail.com" }

@@ -1,6 +1,6 @@
 # SSGentleAlertView
 
-* It is gnetler than UIAlertView
+* It is gentler than UIAlertView
 * It can be used in the same way as UIAlertView
 * It can be changed the Appearance unlike UIAlertView
 
@@ -93,6 +93,35 @@ UIButton* button = [alert buttonBase];
 [alert setButtonBase:button];
 [alert setDefaultButtonBase:button];
 ```
+
+## Getting Started - Installing SSGentleAlertView
+
+Please choose a way you prefer.
+
+### Using CocoaPods
+
+```
+// Podfile
+pod 'SSGentleAlertView'
+```
+and
+```
+pod install
+```
+
+### Using Git
+
+```
+git clone git://github.com/tokorom/SSGentleAlertView.git
+// git submodule add git://github.com/tokorom/SSGentleAlertView.git Externals/SSGentleAlertView
+```
+and Add SSGentleAlertView subdirectory to your Xcode's project.
+
+### Download a zip archive
+
+Download  
+[https://github.com/tokorom/SSGentleAlertView/archive/master.zip](https://github.com/tokorom/SSGentleAlertView/archive/master.zip)  
+and Add SSGentleAlertView subdirectory to your Xcode's project.
 
 -----
 

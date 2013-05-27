@@ -96,6 +96,34 @@ UIButton* button = [alert buttonBase];
 [alert setDefaultButtonBase:button];
 ```
 
+## インストール方法
+
+### CocoaPodsを使う場合
+
+```
+// Podfile
+pod 'SSGentleAlertView'
+```
+Podファイルに上記を追記して
+```
+pod install
+```
+を実行してください。
+
+### Gitを使う場合
+
+```
+git clone git://github.com/tokorom/SSGentleAlertView.git
+// git submodule add git://github.com/tokorom/SSGentleAlertView.git Externals/SSGentleAlertView
+```
+このあと、SSGentleAlertViewというサブディレクトリをXcodeのプロジェクトに追加してください。
+
+### Download a zip archive
+
+zipファイルを  
+[https://github.com/tokorom/SSGentleAlertView/archive/master.zip](https://github.com/tokorom/SSGentleAlertView/archive/master.zip)  
+からダウンロードしてSSGentleAlertViewというサブディレクトリをXcodeのプロジェクトに追加してください。
+
 -----
 
 <small aligin='right'>[English](README.md) | Japanese</small>
