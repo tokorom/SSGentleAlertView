@@ -28,6 +28,9 @@
 
 - (void)awakeFromNib
 {
+  self.titleLabel.text = nil;
+  self.messageLabel.text = nil;
+
   self.defaultTitleLabelHeight = self.titleLabel.bounds.size.height;
   self.defaultMessageLabelHeight = self.messageLabel.bounds.size.height;
   self.defaultButtonContainerViewY = self.buttonContainerView.frame.origin.y;
