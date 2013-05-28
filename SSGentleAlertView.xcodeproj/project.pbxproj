@@ -35,6 +35,7 @@
 		0632F10F175083FD00CE8A0F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F106175083FD00CE8A0F /* ViewController.m */; };
 		0632F1181750952200CE8A0F /* SSDialogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F1121750952200CE8A0F /* SSDialogView.m */; };
 		0632F11E1750952200CE8A0F /* SSGentleAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0632F1161750952200CE8A0F /* SSGentleAlertView.m */; };
+		C6B9B9D617543D69007F8C5E /* SSOverlayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B9B9D517543D69007F8C5E /* SSOverlayWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,8 @@
 		0632F1121750952200CE8A0F /* SSDialogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDialogView.m; sourceTree = "<group>"; };
 		0632F1151750952200CE8A0F /* SSGentleAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSGentleAlertView.h; sourceTree = "<group>"; };
 		0632F1161750952200CE8A0F /* SSGentleAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSGentleAlertView.m; sourceTree = "<group>"; };
+		C6B9B9D417543D69007F8C5E /* SSOverlayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSOverlayWindow.h; sourceTree = "<group>"; };
+		C6B9B9D517543D69007F8C5E /* SSOverlayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSOverlayWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,8 @@
 				0632F1121750952200CE8A0F /* SSDialogView.m */,
 				0632F1151750952200CE8A0F /* SSGentleAlertView.h */,
 				0632F1161750952200CE8A0F /* SSGentleAlertView.m */,
+				C6B9B9D417543D69007F8C5E /* SSOverlayWindow.h */,
+				C6B9B9D517543D69007F8C5E /* SSOverlayWindow.m */,
 				062F70B5175197CC00EE9F53 /* SSGentleAlertViewDefault */,
 				062F70C91751B5C700EE9F53 /* SSGentleAlertViewBlack */,
 				062F70BA175197CC00EE9F53 /* SSGentleAlertViewNative */,
@@ -284,6 +289,7 @@
 				0632F10F175083FD00CE8A0F /* ViewController.m in Sources */,
 				0632F1181750952200CE8A0F /* SSDialogView.m in Sources */,
 				0632F11E1750952200CE8A0F /* SSGentleAlertView.m in Sources */,
+				C6B9B9D617543D69007F8C5E /* SSOverlayWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

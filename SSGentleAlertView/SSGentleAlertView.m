@@ -6,6 +6,7 @@
 
 #import "SSGentleAlertView.h"
 #import "SSDialogView.h"
+#import "SSOverlayWindow.h"
 
 @interface SSGentleAlertView ()
 @property (weak) IBOutlet UIView* backgroundView;
@@ -16,6 +17,7 @@
 @property (strong) NSMutableArray* buttonCaptions;
 @property (assign) CGAffineTransform backupDialogTransform;
 @property (nonatomic) SSGentleAlertViewStyle style;
+@property (strong) UIWindow* overlayWindow;
 @end 
 
 @implementation SSGentleAlertView
@@ -137,15 +139,12 @@
 
   [self setup];
 
-  UIWindow* window = [[UIApplication sharedApplication] keyWindow];
+  UIWindow* window = SSOverlayWindow.new;
   self.frame = window.bounds;
 
-  for (UIView* subview in window.subviews) {
-    if ([subview isKindOfClass:[self class]]) {
-      [subview removeFromSuperview];
-    } 
-  }
   [window addSubview:self];
+  [window makeKeyAndVisible];
+  self.overlayWindow = window;
 
   [self startStateForPopupAnimation];
   __weak id SELF = self;
@@ -255,7 +254,13 @@
                         delay:0.0
                       options:UIViewAnimationOptionCurveEaseIn
                    animations:^{ [SELF finishStateForDisappearAnimation]; }
-                   completion:^(BOOL finished){ [SELF removeFromSuperview]; }];
+                   completion:^(BOOL finished){ [SELF removeSelfAndWindow]; }];
+}
+
+- (void)removeSelfAndWindow
+{
+  [self.window resignKeyWindow];
+  self.overlayWindow = nil;
 }
 
 - (void)startStateForPopupAnimation

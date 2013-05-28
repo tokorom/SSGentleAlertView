@@ -11,10 +11,17 @@
 @interface ViewController ()
 @property (assign) SSGentleAlertViewStyle style;
 @property (weak) IBOutlet UISegmentedControl* segmentedControl;
+@property (weak) IBOutlet UIScrollView* scrollView;
 @property (assign, getter=isOriginal) BOOL original;
 @end 
 
 @implementation ViewController
+
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height * 2);
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
