@@ -348,6 +348,8 @@
   to.highlightedTextColor = from.highlightedTextColor;
   to.shadowColor = from.shadowColor;
   to.shadowOffset = from.shadowOffset;
+  to.adjustsFontSizeToFitWidth = from.adjustsFontSizeToFitWidth;
+  to.minimumScaleFactor = from.minimumScaleFactor;    
 }
 
 @end
